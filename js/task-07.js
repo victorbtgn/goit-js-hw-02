@@ -17,7 +17,7 @@ const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 //   return true;
 // };
 
-const isLoginValid = login => login.length >= 4 && login.length <= 16;
+const isLoginValid = login => login.length >= 4 && login.length <= 16; // а так работает)) почему??
 
 // const isLoginUnique = function(allLogins, login) {
 //   if (allLogins.includes(login)) {
