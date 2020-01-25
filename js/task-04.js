@@ -2,10 +2,7 @@ const formatString = function(string) {
   let shortComent;
 
   if (string.length > 40) {
-    string = string
-      .split("")
-      .slice(0, 41)
-      .join("");
+    string = string.slice(0, 41);
 
     shortComent = string;
     return `${shortComent}...`;
