@@ -1,26 +1,10 @@
-// const checkForSpam = function(message) {
-//   message = message.toLowerCase().split(" ");
-//   let isSpam;
-//   for (let i = 0; i < message.length; i += 1) {
-//     message[i] = message[i].match(/\w/g).join("");
-//     if ((isSpam = message[i] === "spam" || message[i] === "sale")) {
-//       break;
-//     }
-//   }
-
-//   return isSpam;
-// };
-
 const checkForSpam = function(message) {
-  message = message.toLowerCase().split(" ");
-  for (let word of message) {
-    message = word.match(/\w/g).join("");
-    const isSpam = ["spam", "sale"];
+  message = message.toLowerCase();
+  const isSpam = ["spam", "sale"];
 
-    for (let spam of isSpam) {
-      if (message.includes(spam)) {
-        return true;
-      }
+  for (let spam of isSpam) {
+    if (message.includes(spam)) {
+      return true;
     }
   }
 
@@ -35,4 +19,4 @@ console.log(checkForSpam("Get best sale offers now!")); // true
 
 console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
 
-console.log(checkForSpam("How to earn fast money? (spam?)"));
+console.log(checkForSpam("How to earn fast money? (spAm)"));
